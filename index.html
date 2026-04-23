@@ -1,0 +1,243 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
+<title>Nestor Fortes — Business Growth</title>
+<link rel="stylesheet" href="./src/css/style.css">
+<link rel="icon" type="image/png" href="/icon.png">
+<link rel="manifest" href="/manifest.json">
+<link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Barlow:wght@300;400;500;600;700;800;900&family=Barlow+Condensed:wght@300;400;500;700;800;900&display=swap" rel="stylesheet">
+</head>
+<body>
+
+<div class="scroll-progress" id="scrollProgress"></div>
+<div class="cursor" id="cursor"></div>
+<div class="cursor-ring" id="cursorRing"></div>
+
+<!-- NAV -->
+<nav>
+  <div class="nav-flags">
+  </div>
+  <div class="hamburger" id="menuToggle">
+  </div>
+</nav>
+
+<!-- MENU OVERLAY -->
+<div class="menu-overlay" id="menuOverlay">
+  <ul class="menu-links">
+    <li><a href="#hero" style="--i:0" onclick="closeMenu()">Home</a></li>
+    <li><a href="#about" style="--i:1" onclick="closeMenu()">Quem Sou</a></li>
+    <div class="nav-logo">
+        <span class="logo-name">NESTOR FORTES</span>
+        <span class="logo-sub">BUSINESS GROWTH</span>
+    </div>
+    <li><a href="#services" style="--i:2" onclick="closeMenu()">Assessorias</a></li>
+    <li><a href="#cta" style="--i:3" onclick="closeMenu()">Contato</a></li>
+  </ul>
+</div>
+
+<!-- HERO -->
+<section id="hero">
+  <div class="hero-photo"></div>
+  <div class="hero-content">
+    <h1 class="hero-title">
+      <span class="hero-title-line">Minha</span>
+      <span class="hero-title-line">Jornada</span>
+    </h1>
+    <a href="#about" class="hero-cta">
+      <div class="hero-cta-circle">
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2">
+          <line x1="5" y1="12" x2="19" y2="12"/>
+          <polyline points="12 5 19 12 12 19"/>
+        </svg>
+      </div>
+      <span class="hero-cta-text">Quem Sou</span>
+    </a>
+  </div>
+</section>
+
+<!-- ABOUT -->
+<section id="about" class="dot-bg">
+  <div class="about-grid">
+    <div>
+      <h2 class="section-headline reveal">
+        Consultoria moderna,<br>
+        processos otimizados e<br>
+        resultados consistentes para<br>
+        alcançar novos mercados.
+      </h2>
+      <p class="section-body reveal reveal-delay-2">
+        Atuamos lado a lado com gestores para estruturar operações, aprimorar processos
+        e fortalecer a tomada de decisão, sempre com foco em performance e crescimento
+        sustentável. Nosso compromisso é entregar resultados sólidos e preparar cada
+        negócio para conquistar novos mercados com segurança e competitividade.
+      </p>
+    </div>
+    <div class="about-video reveal reveal-delay-3">
+      <div class="about-video-inner"></div>
+      <div class="video-play">
+        <svg width="18" height="18" viewBox="0 0 24 24" fill="white">
+          <polygon points="5 3 19 12 5 21 5 3"/>
+        </svg>
+      </div>
+      <div class="video-labels">
+        <strong>PLENNOS</strong>
+        <span>SITE</span>
+        <span>INSTAGRAM</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- STATS -->
+<section id="stats" class="dot-bg">
+  <div class="stats-top">
+    <h2 class="stats-headline reveal">
+      Qualidade excepcional,<br>
+      soluções eficazes e<br>
+      espaços inspiradores para<br>
+      transformar negócios.
+    </h2>
+    <div class="stats-badge reveal reveal-delay-1">
+      <div class="badge-circle">
+        <span class="badge-number">23</span>
+      </div>
+    </div>
+    <div class="stats-exp reveal reveal-delay-2">
+      <p class="stats-exp-label">+20 ANOS DE EXPERIÊNCIA.</p>
+      <p class="stats-exp-text">Dedicado a fornecer soluções que aliam estratégia e inovação para resultados funcionais e estéticos.</p>
+    </div>
+  </div>
+  <div class="stats-items">
+    <div class="stat-item reveal">
+      <span class="stat-text">Clientes altamente satisfeitos em todo o país.</span>
+      <span class="stat-num">01</span>
+    </div>
+    <div class="stat-item reveal reveal-delay-1">
+      <span class="stat-text">Estou à frente de empresas de destaque</span>
+      <span class="stat-num">02</span>
+    </div>
+    <div class="stat-item reveal reveal-delay-2">
+      <span class="stat-text">Transformo a presença digital de nossos clientes</span>
+      <span class="stat-num">03</span>
+    </div>
+  </div>
+</section>
+
+<!-- SERVICES -->
+<section id="services">
+  <div class="services-header">
+    <div>
+      <p class="services-label reveal">Assessorias Personalizadas</p>
+      <h2 class="services-headline reveal reveal-delay-1">
+        Assessoria<br>
+        adaptada às suas<br>
+        necessidades.
+      </h2>
+    </div>
+    <div></div>
+  </div>
+  <div class="services-cards">
+    <div class="service-card reveal">
+      <div class="service-label-rotated">SERVIÇOS DE ASSESSORIA</div>
+      <div class="service-card-logo">
+        <div class="plennos-icon">P</div>
+        <span class="plennos-name">PLENNOS</span>
+      </div>
+      <div class="service-card-img">
+        <div class="service-card-img-inner" style="background-image: url('https://images.unsplash.com/photo-1553877522-43269d4ea984?w=600&q=70&auto=format&fit=crop&grayscale')"></div>
+      </div>
+      <a href="#cta" class="service-link">
+        <span class="service-link-text">Soluções Empresariais</span>
+        <span class="service-link-arrow">→</span>
+      </a>
+    </div>
+    <div class="service-card reveal reveal-delay-1">
+      <div class="service-card-logo">
+        <div class="plennos-icon">M</div>
+        <span class="plennos-name">MARKETING</span>
+      </div>
+      <div class="service-card-img">
+        <div class="service-card-img-inner" style="background-image: url('https://images.unsplash.com/photo-1460925895917-afdab827c52f?w=600&q=70&auto=format&fit=crop&grayscale')"></div>
+      </div>
+      <a href="#cta" class="service-link">
+        <span class="service-link-text">Estratégia Digital</span>
+        <span class="service-link-arrow">→</span>
+      </a>
+    </div>
+    <div class="service-card reveal reveal-delay-2">
+      <div class="service-card-logo">
+        <div class="plennos-icon">G</div>
+        <span class="plennos-name">GESTÃO</span>
+      </div>
+      <div class="service-card-img">
+        <div class="service-card-img-inner" style="background-image: url('https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=600&q=70&auto=format&fit=crop&grayscale')"></div>
+      </div>
+      <a href="#cta" class="service-link">
+        <span class="service-link-text">Crescimento Sustentável</span>
+        <span class="service-link-arrow">→</span>
+      </a>
+    </div>
+  </div>
+</section>
+
+<!-- CTA -->
+<section id="cta" class="dot-bg">
+  <h2 class="cta-title reveal">
+    Vamos construir algo<br>
+    <em>incrível juntos</em>
+  </h2>
+  <a href="https://wa.me/55" class="cta-btn reveal reveal-delay-2">
+    ENTRAR EM CONTATO →
+  </a>
+</section>
+
+<!-- FOOTER -->
+<footer>
+  <div class="footer-top">
+    <div>
+      <div class="footer-logo-mark">NF</div>
+      <div class="footer-logo-text">NESTOR FORTES</div>
+      <div class="footer-logo-sub">BUSINESS GROWTH</div>
+    </div>
+    <p class="footer-desc">
+      Nestor Fortes é consultor empresarial com mais de 20 anos de experiência em marketing e
+      tecnologia. Como Growth na PLENNOS, lidera projetos que integram estratégias digitais e
+      gestão para impulsionar resultados e promover o crescimento de empresas.
+    </p>
+    <div>
+      <nav class="footer-nav">
+        <a href="#hero" class="hover-line">Home</a>
+        <a href="#about" class="hover-line">Quem Sou</a>
+        <a href="#services" class="hover-line">Assessorias</a>
+        <a href="#cta" class="hover-line">Contato</a>
+      </nav>
+      <div class="footer-social" style="margin-top: 24px;">
+        <a href="#">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M21 11.5a8.38 8.38 0 01-.9 3.8 8.5 8.5 0 01-7.6 4.7 8.38 8.38 0 01-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 01-.9-3.8 8.5 8.5 0 014.7-7.6 8.38 8.38 0 013.8-.9h.5a8.48 8.48 0 018 8v.5z"/></svg>
+        </a>
+        <a href="#">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="2" y="2" width="20" height="20" rx="5" ry="5"/><path d="M16 11.37A4 4 0 1112.63 8 4 4 0 0116 11.37z"/><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"/></svg>
+        </a>
+      </div>
+    </div>
+  </div>
+  <div class="footer-bottom">
+    <span>© 2026 Todos os Direitos Reservados</span>
+    <span>Nestor Fortes — Business Growth</span>
+  </div>
+</footer>
+
+<!-- WHATSAPP -->
+<a href="https://wa.me/55" class="whatsapp-btn">
+  <svg width="26" height="26" viewBox="0 0 24 24" fill="white">
+    <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347z"/>
+    <path d="M12 0C5.373 0 0 5.373 0 12c0 2.104.546 4.082 1.5 5.803L0 24l6.335-1.462A11.94 11.94 0 0012 24c6.627 0 12-5.373 12-12S18.627 0 12 0zm0 21.818a9.818 9.818 0 01-5.026-1.377l-.36-.213-3.728.86.936-3.617-.237-.376A9.818 9.818 0 1112 21.818z"/>
+  </svg>
+</a>
+
+<script src="./src/js/main.js"></script>
+<script src="service-worker.js"></script>
+</body>
+</html>
