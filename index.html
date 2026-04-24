@@ -53,12 +53,15 @@
   <div class="about-grid">
     <div>
       <h2 class="section-headline reveal">
-        Paulistano,<br> iniciou seus estudos <br>
-         no começo dos anos 90
+        Médico paulistano, <br>
+        iniciou sua formação no <br>
+        início da década de 1990
       </h2>
       <p class="section-body reveal reveal-delay-2">
-        na Escola Paulista de Medicina / Universidade Federal de São Paulo, local onde também concluiu residência em cirurgia geral, cirurgia do aparelho digestivo, mestrado e doutorado. Nas últimas duas décadas tem atuado nos principais hospitais de São Paulo. CRM 87.411 / RQE 52.373
-      </p>
+         na Escola Paulista de Medicina / Universidade Federal de São Paulo, onde também concluiu residência em Cirurgia Geral e Cirurgia do Aparelho Digestivo, além de Mestrado e Doutorado.
+         <br>
+         Há mais de duas décadas, atua nos principais hospitais de São Paulo, com sólida experiência e reconhecimento em sua área de especialidade.
+        </p>
     </div>
     <div class="about-video reveal reveal-delay-3">
       <div class="about-video-inner"></div>
@@ -249,7 +252,7 @@
         <a href="#">
           <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M21 11.5a8.38 8.38 0 01-.9 3.8 8.5 8.5 0 01-7.6 4.7 8.38 8.38 0 01-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 01-.9-3.8 8.5 8.5 0 014.7-7.6 8.38 8.38 0 013.8-.9h.5a8.48 8.48 0 018 8v.5z"/></svg>
         </a>
-        <a href="#">
+        <a href="https://instagram.com/drwagner.marcondes">
           <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="2" y="2" width="20" height="20" rx="5" ry="5"/><path d="M16 11.37A4 4 0 1112.63 8 4 4 0 0116 11.37z"/><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"/></svg>
         </a>
       </div>
@@ -271,52 +274,6 @@
 
 <script src="./src/js/main.js"></script>
 <script src="service-worker.js"></script>
-<script>
-  /* --- Nav color adapts to underlying section background --- */
-  const nav = document.querySelector('.main-nav');
-
-  // Map section IDs to their background lightness (dark=white text, light=dark text)
-  // All sections are dark in this site, but hero has a photo that can be light on right side.
-  // We use the actual computed bg color of whatever section is under the nav center point.
-  function getNavTextColor() {
-    const navBottom = nav.getBoundingClientRect().bottom;
-    const navCenterX = window.innerWidth / 2;
-    // Sample a point just below the nav
-    const sampleY = navBottom - 2;
-
-    // Find which section is at that scroll position
-    const scrollY = window.scrollY + sampleY;
-    const sections = document.querySelectorAll('section, footer');
-    let activeBg = '#0a0a0a'; // default black
-
-    sections.forEach(sec => {
-      const top = sec.offsetTop;
-      const bottom = top + sec.offsetHeight;
-      if (scrollY >= top && scrollY <= bottom) {
-        const style = getComputedStyle(sec);
-        activeBg = style.backgroundColor;
-      }
-    });
-
-    // Parse rgb and calculate luminance
-    const match = activeBg.match(/\d+/g);
-    if (match) {
-      const [r, g, b] = match.map(Number);
-      const luminance = (0.299 * r + 0.587 * g + 0.114 * b) / 255;
-      // Light background → dark text; dark background → white text
-      if (luminance > 0.5) {
-        nav.classList.add('nav-light-bg');
-        nav.classList.remove('nav-dark-bg');
-      } else {
-        nav.classList.add('nav-dark-bg');
-        nav.classList.remove('nav-light-bg');
-      }
-    }
-  }
-
-  window.addEventListener('scroll', getNavTextColor, { passive: true });
-  getNavTextColor();
-</script>
 </body>
 </html>
 
