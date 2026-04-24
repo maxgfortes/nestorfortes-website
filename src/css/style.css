@@ -89,6 +89,12 @@
     padding: 24px 48px;
     mix-blend-mode: normal;
     backdrop-filter: blur(20px);
+    background-color: rgba(10,10,10,0.6);
+    transition: background 0.5s ease;
+  }
+
+  .main-nav.scrolled {
+    background: transparent;
   }
 
   .main-nav { display: flex; gap: 36px; align-items: flex-start; }
@@ -128,7 +134,7 @@
     font-family: 'Barlow Condensed', sans-serif;
     font-size: 11px;
     font-weight: 500;
-    letter-spacing: 3px;
+    letter-spacing: 1px;
     display: block;
   }
   .logo-sub {
@@ -153,7 +159,7 @@
     height: 100%;
     background: linear-gradient(to right, var(--black) 0%, transparent 30%),
     url('../img/wagner-hero.jpeg') center/cover no-repeat;
-    filter: grayscale(100%) contrast(1);
+    filter: contrast(1);
     opacity: 0;
     animation: fadeIn 1.2s ease 0.5s forwards;
   }
@@ -164,10 +170,12 @@
   }
   .hero-title {
     font-family: 'helvetica neue', sans-serif;
-    font-size: clamp(60px, 10vw, 100px);
+    font-family: 'Barlow Condensed', sans-serif;
+    font-size: clamp(60px, 11vw, 120px);
     line-height: 0.88;
     overflow: hidden;
   }
+  
   .hero-title-line {
     display: block;
     transform: translateY(110%);
@@ -249,7 +257,6 @@
     width: 100%;
     height: 100%;
     background: url('../img/wagner1.jpeg') center/cover;
-    filter: grayscale(100%) brightness(0.6);
     background-size: cover;
     background-position: top;
     transition: transform 0.6s ease;
@@ -295,6 +302,8 @@
     font-size: clamp(32px, 4vw, 52px);
     font-weight: 800;
     line-height: 1.05;
+    text-align: left;
+    width: 100%;
   }
   .stats-badge {
     grid-column: 2;
@@ -317,6 +326,58 @@
     font-weight: 900;
     color: var(--black);
     line-height: 1;
+  }
+
+  .stats1 {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 20px;
+    width: 100%;
+  }
+
+  .stats2 {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100%;
+  }
+
+.plus {
+  width: 50px;
+  aspect-ratio: 1/1;
+  position: relative;
+}
+
+.plus::before,
+.plus::after {
+  content: "";
+  position: absolute;
+  background-color: rgb(255, 255, 255);
+}
+
+/* linha vertical */
+.plus::before {
+  width: 1.5px;
+  height: 50px;
+  left: 50%;
+  top: 0;
+  transform: translateX(-50%);
+}
+
+/* linha horizontal */
+.plus::after {
+  height: 1.5px;
+  width: 50px;
+  top: 50%;
+  left: 0;
+  transform: translateY(-50%);
+}
+
+  .stats1 p {
+    color: var(--gray)
   }
   .stats-exp {
     grid-column: 3;
@@ -366,8 +427,63 @@
   /* SERVICES */
   #services {
     background: var(--dark2);
-    padding: 120px 60px;
+    padding: 120px 60px 0;
+    display: flex;
   }
+
+  .services-container {
+    display: flex;
+    flex-direction: column;
+    gap: 60px;
+    width: 100%;
+  }
+
+  .dummy-img {
+    width: 100%;
+    height: 500px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .dummy-img img {
+    width: 250px;
+    object-fit: cover;
+  }
+
+  .service-box {
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+    padding: 20px;
+  }
+
+  .service-header {
+    font-family: 'Barlow Condensed', sans-serif;
+    font-size: clamp(50px, 9vw, 110px);
+    font-weight: 900;
+    line-height: 1;
+  }
+
+  .service-list {
+    width: 100%;
+  }
+
+  .list-item {
+    padding: 8px 0;
+    font-size: 17px;
+    color: var(--gray);
+  }
+
+  .list-item svg {
+    width: 16px; height: 16px;
+    margin-right: 10px;
+    flex-shrink: 0;
+    color: var(--white);
+  }
+
+  
+
   .services-label {
     font-size: 10px;
     font-weight: 700;
@@ -533,10 +649,16 @@
   }
   .footer-logo-text {
     font-family: 'Barlow Condensed', sans-serif;
-    font-size: 13px;
-    letter-spacing: 3px;
+    font-size: 1.4rem;
+    letter-spacing: 1px;
     font-weight: 600;
   }
+
+  .footer-logo-text span {
+    font-weight: 800;
+    color: rgba(255,255,255,0.3);
+  }
+
   .footer-logo-sub { font-size: 9px; letter-spacing: 3px; color: var(--gray); }
   .footer-logo-mark {
     font-family: 'Barlow Condensed', sans-serif;
@@ -555,9 +677,14 @@
     max-width: 380px;
   }
   .footer-social { display: flex; gap: 20px;}
+
+  .footer-social a svg {
+    width: 36px; height: 36px;
+    transition: stroke 0.3s;
+  }
+
   .footer-social a {
     width: 40px; height: 40px;
-    border: 1px solid rgba(255,255,255,0.15);
     border-radius: 50%;
     display: flex; align-items: center; justify-content: center;
     color: var(--white);
@@ -662,14 +789,19 @@
     url('../img/wagner-hero.jpeg') center/cover no-repeat;
     background-size: cover;
     background-position: 60%;
-    filter: grayscale(100%) contrast(1);
     opacity: 0;
     animation: fadeIn 1.2s ease 0.5s forwards;
+  }
+  
+  .plus {
+    display: none;
   }
 
   #services {
     padding: 100px 0;
+    display: flex;
   }
+
 
   .scroll-progress {
     display: none;
@@ -718,7 +850,32 @@
     justify-content: center;
     align-items: center;
   }
+
+  #services {
+    display: flex;
+    flex-direction: column;
+  }
+
+
+    
+  .service-box {
+    text-align: center;
+  }
+
+  .service-list {
+    text-align: left;
+    display: flex;
+    flex-direction: column;
+  }
+
 }
+
+  .hospitals {
+    background: var(--dark2);
+    padding: 120px 60px 120px;
+    display: flex;
+    flex-direction: column;
+  }
 
 .row-hospital-area {
   width: 100%;
@@ -817,6 +974,7 @@
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  height: 100px;
 }
 
 
@@ -925,7 +1083,7 @@
   .stat-item:last-child { border-bottom: none; }
 
   /* Services */
-  #services { padding: 120px 0; }
+  #services { padding: 120px 0 60px; }
   .services-header {
     padding: 0 20px 0 20px;
     grid-template-columns: 1fr;
@@ -983,4 +1141,136 @@
   .service-card { padding: 40px 28px; }
   #cta { height: auto; min-height: 80vh; padding: 120px 36px; }
   footer { padding: 72px 36px 100px; }
+}
+
+
+/* =============================================
+   DOENÇAS TRATADAS — NOVO ESTILO
+   ============================================= */
+.doencas-header {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  margin-bottom: 56px;
+}
+.doencas-label {
+  font-size: 10px;
+  font-weight: 700;
+  letter-spacing: 4px;
+  text-transform: uppercase;
+  color: var(--gray);
+}
+.doencas-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 1px;
+  background: rgba(255,255,255,0.07);
+}
+.doenca-card {
+  background: var(--dark2);
+  padding: 36px 28px 28px;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  position: relative;
+  overflow: hidden;
+  transition: background 0.35s ease;
+  cursor: default;
+}
+.doenca-card::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(135deg, rgba(255,255,255,0.03) 0%, transparent 60%);
+  opacity: 0;
+  transition: opacity 0.35s ease;
+}
+.doenca-card:hover {
+  background: #1e1e1e;
+}
+.doenca-card:hover::before {
+  opacity: 1;
+}
+.doenca-num {
+  font-family: 'Barlow Condensed', sans-serif;
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 3px;
+  color: rgba(255,255,255,0.18);
+  transition: color 0.35s ease;
+}
+.doenca-card:hover .doenca-num {
+  color: rgba(255,255,255,0.4);
+}
+.doenca-nome {
+  font-family: 'Barlow', sans-serif;
+  font-size: 15px;
+  font-weight: 500;
+  line-height: 1.4;
+  color: rgba(255,255,255,0.6);
+  transition: color 0.35s ease;
+}
+.doenca-card:hover .doenca-nome {
+  color: rgba(255,255,255,0.9);
+}
+.doenca-line {
+  height: 1px;
+  background: rgba(255,255,255,0.08);
+  margin-top: auto;
+  transform: scaleX(0);
+  transform-origin: left;
+  transition: transform 0.45s cubic-bezier(0.16, 1, 0.3, 1);
+}
+.doenca-card:hover .doenca-line {
+  transform: scaleX(1);
+}
+
+@media (max-width: 900px) {
+  .doencas-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+@media (max-width: 640px) {
+  .doencas-grid {
+    grid-template-columns: 1fr 1fr;
+    gap: 1px;
+  }
+  .doenca-card {
+    padding: 24px 16px 20px;
+  }
+  .doenca-nome {
+    font-size: 13px;
+  }
+}
+
+/* Remove old styles */
+.hurt, .grid-hurts { display: none; }
+
+
+
+/* MOBILE OVERLAY HERO */
+@media (max-width: 900px) {
+  #hero::after {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(
+      0deg,
+      rgba(0, 0, 0, 0.75) 0%,
+      rgba(0, 0, 0, 0.25) 45%,
+      rgba(0, 0, 0, 0) 80%
+    );
+    z-index: 1;
+    pointer-events: none;
+  }
+
+  /* garante que o conteúdo fique acima do overlay */
+  .hero-content {
+    position: absolute;
+    z-index: 2;
+  }
+
+  .hero-photo {
+    z-index: 0;
+  }
 }
