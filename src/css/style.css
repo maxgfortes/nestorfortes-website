@@ -494,16 +494,18 @@
   }
   .services-header {
     display: grid;
-    grid-template-columns: 1fr 1fr;
     gap: 60px;
     align-items: end;
     margin-bottom: 80px;
+    width: 100%;
   }
   .services-headline {
     font-family: 'Barlow Condensed', sans-serif;
     font-size: clamp(40px, 5.5vw, 70px);
     font-weight: 900;
     line-height: 0.95;
+    width: 100%;
+    text-align: left;
   }
   .services-cards {
     display: grid;
@@ -1268,6 +1270,15 @@
   .hero-content {
     position: absolute;
     z-index: 2;
+  }
+
+    .services-headline {
+    font-family: 'Barlow Condensed', sans-serif;
+    font-size: clamp(40px, 5.5vw, 70px);
+    font-weight: 900;
+    line-height: 0.95;
+    width: 100%;
+    text-align: center;
   }
 
   .hero-photo {
