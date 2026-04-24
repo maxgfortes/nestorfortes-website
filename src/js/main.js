@@ -40,25 +40,6 @@ if (!isMobile) {
   });
 }
 
-// MENU
-const toggle = document.getElementById('menuToggle');
-const overlay = document.getElementById('menuOverlay');
-let menuOpen = false;
-
-toggle.addEventListener('click', () => {
-  menuOpen = !menuOpen;
-  overlay.classList.toggle('open', menuOpen);
-  toggle.querySelector('span:nth-child(1)').style.transform = menuOpen ? 'rotate(45deg) translate(5px, 5px)' : '';
-  toggle.querySelector('span:nth-child(2)').style.opacity = menuOpen ? '0' : '1';
-  toggle.querySelector('span:nth-child(3)').style.transform = menuOpen ? 'rotate(-45deg) translate(5px, -5px)' : '';
-});
-
-function closeMenu() {
-  menuOpen = false;
-  overlay.classList.remove('open');
-  toggle.querySelectorAll('span').forEach(s => { s.style.transform = ''; s.style.opacity = '1'; });
-}
-
 // SCROLL PROGRESS
 window.addEventListener('scroll', () => {
   const pct = (window.scrollY / (document.body.scrollHeight - window.innerHeight)) * 100;
