@@ -88,13 +88,23 @@
     justify-content: space-between;
     padding: 24px 48px;
     mix-blend-mode: normal;
-    backdrop-filter: blur(20px);
-    background-color: rgba(10,10,10,0.6);
+    background-color: #000;
     transition: background 0.5s ease;
   }
-
+  
+  @supports (backdrop-filter: blur(10px)) {
+  .main-nav {
+    backdrop-filter: blur(20px);
+    background-color: rgba(10,10,10,0.6);
+  }
+  
   .main-nav.scrolled {
     background: transparent;
+  }
+}
+
+  .main-nav.scrolled {
+    background: #000;
   }
 
   .main-nav { display: flex; gap: 36px; align-items: flex-start; }
